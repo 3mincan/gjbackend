@@ -1,7 +1,10 @@
 import express from "express";
 import axios from "axios";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => res.send("Home Page Route"));
